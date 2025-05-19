@@ -225,21 +225,21 @@ toggleBtn.addEventListener('click', () => {
 
 
 const notifications = [
-  // {
-  //   name: "Татьяна",
-  //   avatar: "../include/home/avatar_comm_3.png",
-  //   message: "Заходи на мой курс 1С: Бухгалтерия. Тебе понравится!!!"
-  // },
-  // {
-  //   name: "Мария",
-  //   avatar: "../include/home/avatar_comm_1.png",
-  //   message: "У меня новый курс! 3D-Моделирование"
-  // },
-  // {
-  //   name: "Михаил",
-  //   avatar: "../include/home/avatar_comm_2.png",
-  //   message: "Посмотри что у нас нового по курсам"
-  // },
+  {
+    name: "Татьяна",
+    avatar: "../include/home/avatar_comm_3.png",
+    message: "Заходи на мой курс 1С: Бухгалтерия. Тебе понравится!!!"
+  },
+  {
+    name: "Мария",
+    avatar: "../include/home/avatar_comm_1.png",
+    message: "У меня новый курс! 3D-Моделирование"
+  },
+  {
+    name: "Михаил",
+    avatar: "../include/home/avatar_comm_2.png",
+    message: "Посмотри что у нас нового по курсам"
+  },
   {
     name: "Code Peak",
     avatar: "../include/header/logo-notification.png",
