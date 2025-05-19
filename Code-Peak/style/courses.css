@@ -1,0 +1,164 @@
+#Courses_Search{
+    padding-top: 7vw;
+    margin-left: 9vw;
+    width: 100%;
+    height: 100%;
+    min-height: 47vw;
+    color: var(--second-color);
+}
+.search_courses_block{
+    
+    margin-top: 2vw;
+    width: 62.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5vw;
+}
+.search_courses_block button{
+    color: var(--second-color);
+}
+#filters .btn_search_courses.active_courses{
+    transform: rotate(-10deg);
+    background: var(--additional-color);
+    color: #000;
+  }
+.btn_search_courses{
+    color: var(--first-color);
+    cursor: pointer;
+    font-size: .8vw;
+    font-family:var(--font-second);
+    font-weight: 300;
+    padding: .5vw 1.3vw;
+    border: none;
+    border-radius: 100px;
+    background: var(--first-color);
+    white-space: nowrap;
+    transition: .5s ease;
+}
+.btn_search_courses:hover{
+    transform: rotate(-10deg);
+    background: var(--additional-color);
+    color: #000;
+}
+
+#courses{
+    margin-top: 2.6vw;
+    width: 80vw;
+    flex-wrap: wrap;
+    gap: 5.5vw;
+    row-gap: 2vw;
+    display: flex;
+
+}
+.course-card{
+    width: 23vw;
+    height: 13vw;
+    color: #000;
+}
+.course_item{
+    width: 23vw;
+    padding: .5vw 1vw;
+    height: 13vw;
+    background-image: url('../include/courses/Subtract.svg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.name_courses_item{
+    width: 18vw;
+    font-family: var(--font-first);
+    font-weight: 500;
+    font-size: 1.5vw;
+}
+.course_item p{
+    margin-top: .5vw;
+    font-family: var(--font-second);
+    font-size: .8vw;
+    font-weight: 300;
+}
+.short_text{
+    margin-top: 1vw;
+    width: 17vw;
+}
+.stack_raz{
+    color: var(--second-color);
+    flex-wrap: wrap;
+    width: 18vw;
+    margin-top: 1vw;
+    display: flex;
+    gap: .2vw;
+}
+.stack_raz p{
+    font-size: .6vw;
+    padding: .2vw .5vw;
+    background: var(--grey);
+    color: #ffffff;
+    border-radius: .2vw;
+}
+.button_array_courses{
+    cursor: pointer;
+    width: 2.6vw;
+    height: 2.6vw;
+    background: var(--second-color);
+    border: none;
+    border-radius: 100px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: -9.8vw;
+    margin-left: 19.6vw;
+    transition: .5s ease;
+}
+.button_array_courses svg{
+    stroke: var(--first-color);
+    fill: transparent;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+.button_array_courses:hover{
+    transform: rotate(45deg) scale(1.2);
+}
+
+#loadMoreBtn{
+    width: 12vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border: none;
+    background: var(--second-color);
+    gap: 1vw;
+    border-radius: 100px;
+}
+#loadMoreBtn svg{
+    fill: transparent;
+    width: 1.8vw;
+    height: 1.8vw;
+    stroke: var(--first-color);
+    transform: rotate(135deg);
+    border-radius: 100px;
+    transition: .5s ease;
+}
+#loadMoreBtn span{
+    color: var(--first-color);
+    font-family: var(--font-second);
+    font-size: .8vw;
+    font-weight: 300;
+}
+#loadMoreBtn:hover svg{
+    transform: rotate(-45deg);
+}
+.morebtn{
+    margin-top: 1vw;
+    display: flex;
+    justify-content: end;
+    width: 80vw;
+}
+.donthavecourses{
+    font-family: var(--font-second);
+    font-size: .8vw;
+    font-weight: 300;
+}
+.button_array_courses svg{
+    stroke: var(--first-color);
+}
