@@ -2,4 +2,4 @@
 ## Сайт по IT курсам
 создан для дипломной работы, выполнена часть со стороны клиента
 
-githab.io
+GitHub Page(https://onpainn.github.io/Code-Peak/Code-Peak/html/LoginReg.html)
