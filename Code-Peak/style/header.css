@@ -1,0 +1,458 @@
+body{
+    overflow-x: hidden;
+}
+
+#Header{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+    color: var(--first-color);
+}
+.header{
+    
+    width: 78vw;
+    height: 2.6vw;
+    padding: 0 0.4vw;
+    background: var(--menu-color);
+    backdrop-filter: blur(5px);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Левая сторона меню */
+
+.header-left{
+    display: flex;
+    align-items: center;
+    gap:1.5vw;
+}
+
+.logo-site{
+    display: flex;
+    align-items: center;
+    gap: 0.3vw;
+}
+.logo-site a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2vw;
+    height: 2vw;
+    background: var(--additional-color);
+    border-radius: 100px;
+}
+.logo-site a img{
+    width: 0.8vw;
+}
+.logo-site h1{
+    font-family: var(--font-first);
+    font-weight: 500;
+    font-size: 1vw;
+    cursor: default;
+}
+#datetime_menu{
+    font-family: var(--font-second);
+    font-weight: 300;
+    font-size: 0.8vw;
+}
+.search{
+    width: 21vw;
+    height: 2.4vw;
+    background: var(--additional-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 100px;
+}
+.search input{
+    border: none;
+    background: transparent;
+    color: var(--second-color);
+    outline: 0;
+    margin-left: 1vw;
+    width: 15.6vw;
+    font-family: var(--font-second);
+    font-weight: 300;
+    font-size: 0.8vw;
+}
+.search .icon_search{
+    cursor: pointer;
+    border-radius: 100px;
+    margin-right: 1vw;
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: var(--first-color);
+}
+.icon_search img{
+    width: 0.8vw;
+}
+.header-navigation ul{
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    gap: .2vw;
+}
+.header-navigation li{
+    display: flex;
+    align-items: center;
+
+    height: 2.4vw;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: .5s ease;
+    border-radius: 100px;
+}
+.active-nav{
+    background: var(--grey);
+}
+.header-navigation li a{
+    position: relative;
+    font-family: var(--font-second);
+    font-weight: 300;
+    font-size: 0.8vw;
+    padding: .7vw 1vw;
+    text-decoration: none;
+    color: var(--first-color);
+}
+ .hover-bg {
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--grey);
+  border-radius: 100px;
+  transition: .3s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Правая сторона меню */
+
+.header-right{
+    display: flex;
+    gap: .5vw;
+}
+.header-right button{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2vw;
+    height: 2vw;
+    background: var(--grey);
+    border: none;
+    border-radius: 100px;
+    transition: .5s ease;
+}
+.header-right button span{
+    position: absolute;
+    color: var(--first-color);
+    font-family: var(--font-second);
+    font-weight: 300;
+    font-size: 0.6vw;
+    opacity: 0;
+    transition: .2s;
+}
+.header-right img{
+    width: 0.8vw;
+}
+.header-right button:hover{
+    width: 6vw;
+}
+.header-right button:hover img{
+    opacity: 0;
+}
+.header-right button:hover span{
+    opacity: 1;
+}
+.header-right a{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--first-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 2vw;
+    background: var(--grey);
+    border: none;
+    border-radius: 100px;
+    transition: .5s ease;
+    font-size: 0.6vw;
+    transition: .2s;
+     font-family: var(--font-second);
+    font-weight: 300;
+}
+.header-right a:hover{
+    width: 6vw;
+    background: var(--additional-color);
+    color: var(--second-color)
+}
+
+
+
+
+
+
+.overlay-nav{
+    color: var(--first-color);
+    z-index: 2;
+    position: fixed;
+    margin-left: 80vw;
+    margin-top: 4vw;
+    width: 18vw;
+    height: 10vw;
+    background: var(--menu-color);
+    backdrop-filter: blur(5px);
+    border-radius: 1vw;
+    display: none;
+    justify-content: center;
+
+}
+.overlay-content{
+    z-index: 1;
+    width: 16vw;
+    display: grid;
+    align-items: center;
+}
+.overlay-content h1{
+    font-family: var(--font-first);
+    font-weight: 500;
+    font-size: 1vw;
+    cursor: default;
+    text-align: center;
+}
+.overlay-content p{
+    font-family: var(--font-second);
+    font-weight: 300;
+    font-size: 0.8vw;
+}
+.change-color{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.color-select{
+    display: flex;
+    gap: .5vw;
+}
+.color-select .color-btn{
+    background-color: #CCFF00;
+    width: 1.5vw;
+    height: 1.5vw;
+    cursor: pointer;
+    border-radius: 100px;
+}
+.color-select .color-btn:nth-child(2){
+    background-color: #FF8080;
+}
+.color-select .color-btn:nth-child(3){
+    background-color: #FDD961;
+}
+.color-select .color-btn:nth-child(4){
+    background-color: #8095FF;
+}
+.overlay-content button{
+    width: 100%;
+    margin-bottom: .5vw;
+    font-size: .8vw;
+    font-family: var(--font-second);
+    height: 2vw;
+    border-radius: 100px;
+    border: none;
+    background: var(--additional-color);
+    cursor: pointer;
+}
+.dark-mode{
+    margin-top: -.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+.dark-mode img{
+    cursor: pointer;
+    width: 1.6vw;
+}
+.massage{
+    border-radius: .5vw;
+    height: 9vw;
+    overflow-y: auto;
+    gap: .1vw;
+}
+#notification-overlay{
+    height: 15vw;
+}
+.massage p{
+    font-size: .7vw;
+    font-family: var(--font-second); 
+    text-align: start;
+    
+}
+/* Стилизуем полосу прокрутки */
+.massage::-webkit-scrollbar {
+  width: 0px;
+}
+.massage-info{
+    margin-top: .2vw;
+    display: flex;
+    flex-direction: column;
+    gap: .2vw;
+    padding: .5vw;
+    color: var(--first-color);
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    border-radius: .4vw;
+    background: var(--grey);
+}
+.logo-user-massage{
+    display: flex;
+    gap: .5vw;
+    align-items: center;
+    justify-content: start;
+}
+.logo-user-massage h1{
+    font-size: .8vw;
+    font-family: var(--font-first);
+}
+.logo-user-massage img{
+    border-radius: 100px;
+    background: var(--additional-color);
+    width: 1.2vw;
+    height: 1.2vw;
+}
+#account-overlay{
+    height: 20vw;
+}
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar img{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 100px;
+}
+.user-info{
+    margin-bottom: 1vw;
+}
+.num-acc{
+    text-align: center;
+}
+.button-account{
+    display: flex;
+    text-decoration: none;
+    gap: .5vw;
+    justify-content: space-between;
+}
+.button-account button{
+    color: var(--first-color);
+    cursor: pointer;
+    width: 7.8vw;
+    height: 2vw;
+    font-size: .8vw;
+    font-family: var(--font-second);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--grey);
+    border-radius: 100px;
+}
+.button-account button:nth-child(2){
+    background: #FF4545;
+    cursor: pointer;
+    width: 7.8vw;
+    height: 2vw;
+    font-size: .8vw;
+    font-family: var(--font-second);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+.lg{
+    width: 14.5vw;
+}
+
+.edit-profil{
+    height: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5vw;
+}
+.edit-profil input{
+    padding: .5vw;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background: var(--grey);
+    color:var(--first-color);
+    font-family: var(--font-second);
+    font-weight: 300;
+    font-size: 0.8vw;
+}
+
+.edit-button button:nth-child(2){
+    background: #FF4545;
+    color: #fff;
+}
+.account-btn-close{
+    position: absolute;
+    padding: .5vw;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+.account-btn-close button{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2vw;
+    height: 2vw;
+    z-index: 1000;
+    border-radius: 100px;
+    border: none;
+    background: var(--additional-color);
+}
+.account-btn img{
+    height: .5vw;
+    width: .5vw;
+}
+.file-upload-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+.file-upload-button {
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-size: .8vw;
+    font-weight: 300;
+    display: flex;
+    width: 100%;
+    background-color: var(--additional-color);
+    padding: 10px 20px;
+    border-radius: .4vw;
+    cursor: pointer;
+}
+
+.file-upload-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
