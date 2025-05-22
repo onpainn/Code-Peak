@@ -279,9 +279,6 @@ form {
     border-radius: .4vw;
     cursor: pointer;
 }
-[src=""] {
-  display:none;
-}
 
 .file-upload-input {
     position: absolute;
