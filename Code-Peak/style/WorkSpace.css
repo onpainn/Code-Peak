@@ -1,0 +1,362 @@
+#WorkSpace {
+    padding-top: 7vw;
+    margin: 0 9vw;
+    width: 100%;
+    height: 100%;
+    min-height: 47vw;
+    color: var(--second-color);
+}
+
+.title-page {
+    max-width: 35vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.title-page h1 {
+    color: var(--second-color);
+    height: 2.3vw;
+    font-size: 2vw;
+    font-weight: 500;
+    font-family: var(--font-first);
+    text-transform: uppercase;
+}
+
+.title-page p {
+    font-size: .8vw;
+    font-family: var(--font-second);
+    font-weight: 300;
+}
+
+
+
+.content-workspace {
+    margin-top: 2vw;
+}
+
+.button-block {
+    display: flex;
+    gap: 1vw;
+}
+
+.button-block p {
+    font-size: .8vw;
+    font-weight: 300;
+    font-family: var(--font-second);
+}
+
+.button-block button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: .4vw 1vw;
+    border-radius: .5vw;
+    border: none;
+    background: var(--additional-color);
+}
+
+.i-button {
+    width: 1.2vw;
+    height: 1.2vw;
+    stroke-width: 1;
+}
+
+.load-function {
+    margin-top: 2vw;
+}
+
+.load-function-h1 {
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+    font-weight: 500;
+    font-family: var(--font-first);
+}
+
+.panel {
+    display: none;
+}
+
+.panel.active_pan {
+    display: block;
+}
+
+.send-form {
+    border-radius: 1vw;
+    padding: 1vw;
+    display: flex;
+    width: 37vw;
+    flex-wrap: wrap;
+    gap: 1vw;
+    column-gap: 5vw;
+}
+
+.info-element p {
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-weight: 300;
+    font-size: 0.8vw;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .2vw;
+    width: 15vw;
+}
+
+.elements input {
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-weight: 300;
+    font-size: 0.8vw;
+    padding: .4vw;
+    background: transparent;
+    outline: none;
+    border-radius: .5vw;
+    border: 1px solid var(--second-color);
+    width: 100%;
+    transition: .5s ease;
+}
+
+.elements input:focus {
+    border: 1px dashed var(--second-color);
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.name-tag {
+    text-align: center;
+    font-family: var(--font-first);
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+#availableTags,
+#tagList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .2vw;
+    width: 100%;
+}
+
+#tagList {
+    min-height: 2.2vw;
+    justify-content: center;
+    min-width: 35vw;
+    border: 1px dashed;
+    border-radius: .5vw;
+}
+
+.tag {
+    color: var(--second-color);
+    cursor: pointer;
+    font-size: .6vw;
+    font-family: var(--font-second);
+    font-weight: 300;
+    padding: .5vw 1vw;
+    border: 1px solid;
+    border-radius: 100px;
+    background: var(--first-color);
+    white-space: nowrap;
+    transition: .5s ease;
+}
+
+.help-tags {
+    margin-top: .2vw;
+    text-align: center;
+    color: var(--second-color);
+    font-size: .8vw;
+    font-family: var(--font-second);
+    font-weight: 300;
+}
+
+.file-upload-wrapper {
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.file-upload-button {
+    font-family: var(--font-second);
+    color: #000;
+    font-size: .8vw;
+    font-weight: 300;
+    display: flex;
+    width: 100%;
+    background-color: var(--additional-color);
+    padding: .5vw .5vw;
+    border-radius: .4vw;
+    cursor: pointer;
+}
+
+.file-upload-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+.btn-send {
+    border: none;
+    width: 10%;
+    border-radius: 10px;
+    padding: .2vw;
+    background: var(--additional-color);
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    font-family: var(--font-second);
+    text-align: center;
+    font-family: var(--font-second);
+    font-weight: 300;
+    font-size: .8vw;
+    padding: .2vw 2vw;
+    border-radius: 10px;
+}
+
+.success {
+    color: rgb(0, 0, 0);
+    background: var(--additional-color);
+}
+
+.error {
+    color: red;
+    border: 1px solid red;
+    background: #ff9595;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+
+
+
+.panel-edit-courses{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 2vw;
+    margin: 0;
+}
+#editForm{
+    display: none;
+    flex-direction: column;
+    gap: 1vw;
+    width: 20vw;
+}
+#editForm h3{
+    font-family: var(--font-first);
+    font-size: 1vw;
+    font-weight: 500;
+}
+#editForm input{
+    outline: none;
+    background: none;
+    color: var(--second-color);
+    padding: .5vw;
+    border-radius: .5vw;
+    border: 1px solid var(--second-color);
+}
+#editForm textarea{
+    color: var(--second-color);
+    outline: none;
+    resize: none;
+    height: 4.5vw;
+    padding: .5vw;
+    border-radius: .5vw;
+    font-family: var(--font-second);
+    font-weight: 300;
+    background: transparent;
+}
+#editForm textarea::-webkit-scrollbar {
+  width: 0px;
+}
+#editForm .btn-edit{
+    display: flex;
+    gap: .2vw;
+    justify-content: space-between;
+}
+.btn-edit button{
+    border: none;
+    border-radius: .5vw;
+    padding: .2vw;
+    width: 100%;
+    background: var(--additional-color);
+}
+.btn-edit button:nth-child(2){
+    background: #ff9595;
+}
+#coursesContainer{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    gap: .2vw;
+}
+.container-edit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--second-color);
+    padding: .5vw;
+    border-radius: .5vw;
+}
+.container-edit h4{
+    font-family: var(--font-first);
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+.btn-container-edit{
+    border: none;
+    display: flex;
+    gap: .5vw;
+}
+.btn-container-edit button{
+    border: none;
+    border-radius: .5vw;
+    background: var(--additional-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5vw;
+}
+.btn-container-edit button:nth-child(2){
+    background: #ff9595;
+}
+.btn-container-edit button img{
+    width: 1vw;
+    height: 1vw;
+}
+#editForm{
+
+}
