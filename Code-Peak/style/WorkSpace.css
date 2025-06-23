@@ -1,0 +1,1033 @@
+#WorkSpace {
+    padding-top: 7vw;
+    margin: 0 9vw;
+    width: 100%;
+    height: 100%;
+    min-height: 47vw;
+    color: var(--second-color);
+}
+
+.title-page {
+    max-width: 35vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.title-page h1 {
+    color: var(--second-color);
+    height: 2.3vw;
+    font-size: 2vw;
+    font-weight: 500;
+    font-family: var(--font-first);
+    text-transform: uppercase;
+}
+
+.title-page p {
+    font-size: .8vw;
+    font-family: var(--font-second);
+    font-weight: 300;
+}
+
+
+
+.content-workspace {
+    margin-top: 2vw;
+}
+
+.button-block {
+    display: flex;
+    gap: 1vw;
+}
+
+.button-block p {
+    font-size: .8vw;
+    font-weight: 300;
+    font-family: var(--font-second);
+}
+
+.button-block button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: .4vw 1vw;
+    border-radius: .5vw;
+    border: none;
+    background: var(--additional-color);
+}
+
+.i-button {
+    width: 1.2vw;
+    height: 1.2vw;
+    stroke-width: 1;
+}
+
+.load-function {
+    margin-top: 2vw;
+}
+
+.load-function-h1 {
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+    font-weight: 500;
+    font-family: var(--font-first);
+}
+
+.panel {
+    display: none;
+}
+
+.panel.active_pan {
+    display: block;
+}
+
+.send-form {
+    border-radius: 1vw;
+    padding: 1vw;
+    display: flex;
+    width: 37vw;
+    flex-wrap: wrap;
+    gap: 1vw;
+    column-gap: 5vw;
+}
+
+.info-element p {
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-weight: 300;
+    font-size: 0.8vw;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .2vw;
+    width: 15vw;
+}
+
+.elements input {
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-weight: 300;
+    font-size: 0.8vw;
+    padding: .4vw;
+    background: transparent;
+    outline: none;
+    border-radius: .5vw;
+    border: 1px solid var(--second-color);
+    width: 100%;
+    transition: .5s ease;
+}
+
+.elements input:focus {
+    border: 1px dashed var(--second-color);
+}
+#teacherSelect{
+    font-family: var(--font-second);
+    font-weight: 300;
+    width: 15vw;
+    padding: .4vw;
+    outline: none;
+    font-size: 0.8vw;
+    border-radius: .5vw;
+    color: #000;
+    background: var(--additional-color);
+}
+.tags {
+    display: flex;
+    flex-direction: column;
+    width: 36vw;
+}
+
+.name-tag {
+    text-align: center;
+    font-family: var(--font-first);
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+#availableTags,
+#tagList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .2vw;
+    width: 100%;
+}
+
+#tagList {
+    min-height: 2.2vw;
+    justify-content: center;
+    min-width: 35vw;
+    border: 1px dashed;
+    border-radius: .5vw;
+}
+
+.tag {
+    color: var(--second-color);
+    cursor: pointer;
+    font-size: .6vw;
+    font-family: var(--font-second);
+    font-weight: 300;
+    padding: .5vw 1vw;
+    border: 1px solid;
+    border-radius: 100px;
+    background: var(--first-color);
+    white-space: nowrap;
+    transition: .5s ease;
+}
+
+.help-tags {
+    margin-top: .2vw;
+    text-align: center;
+    color: var(--second-color);
+    font-size: .8vw;
+    font-family: var(--font-second);
+    font-weight: 300;
+}
+
+.file-upload-wrapper {
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.file-upload-button {
+    font-family: var(--font-second);
+    color: #000;
+    font-size: .8vw;
+    font-weight: 300;
+    display: flex;
+    width: 100%;
+    background-color: var(--additional-color);
+    padding: .5vw .5vw;
+    border-radius: .4vw;
+    cursor: pointer;
+}
+
+.file-upload-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/* ///////////////////////////////////// */
+
+
+.btn-send {
+    border: none;
+    width: 10%;
+    border-radius: 10px;
+    padding: .2vw;
+    background: var(--additional-color);
+    cursor: pointer;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    font-family: var(--font-second);
+    text-align: center;
+    font-family: var(--font-second);
+    font-weight: 300;
+    font-size: .8vw;
+    padding: .2vw 2vw;
+    border-radius: 10px;
+}
+
+.success {
+    color: rgb(0, 0, 0);
+    background: var(--additional-color);
+}
+
+.error {
+    color: red;
+    border: 1px solid red;
+    background: #ff9595;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+
+
+
+.panel-edit-courses{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 2vw;
+    margin: 0;
+}
+.edit-form{
+    border: 1px dashed var(--second-color);
+    padding: .5vw;
+    border-radius: .5vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 25vw;
+}
+.edit-form h3{
+    font-family: var(--font-first);
+    font-size: 1vw;
+    font-weight: 500;
+}
+.edit-form input{
+    outline: none;
+    background: none;
+    color: var(--second-color);
+    padding: .5vw;
+    border-radius: .5vw;
+    border: 1px solid var(--second-color);
+}
+.edit-form textarea{
+    color: var(--second-color);
+    outline: none;
+    resize: none;
+    height: 4.5vw;
+    padding: .5vw;
+    border-radius: .5vw;
+    font-family: var(--font-second);
+    font-weight: 300;
+    background: transparent;
+}
+.edit-form textarea::-webkit-scrollbar {
+  width: 0px;
+}
+.edit-form .btn-edit{
+    display: flex;
+    gap: .2vw;
+    justify-content: space-between;
+}
+.btn-edit button{
+    border: none;
+    border-radius: .5vw;
+    padding: .2vw;
+    width: 100%;
+    background: var(--additional-color);
+}
+.btn-edit button img{
+    width: 1vw;
+    height: 1vw;
+}
+.btn-edit button:nth-child(2){
+    background: #ff9595;
+}
+#coursesContainer{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    gap: .5vw;
+}
+.container-edit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--second-color);
+    padding: .5vw;
+    border-radius: .5vw;
+}
+.container-edit h4{
+    font-family: var(--font-first);
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+.btn-container-edit{
+    border: none;
+    display: flex;
+    gap: .5vw;
+}
+.btn-container-edit button{
+    border: none;
+    border-radius: .5vw;
+    background: var(--additional-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5vw;
+}
+.btn-container-edit button:nth-child(2){
+    background: #ff9595;
+}
+.btn-container-edit button img{
+    width: 1vw;
+    height: 1vw;
+}
+.user-card{
+    width: 40vw;
+    display: none;
+    flex-direction: column;
+    gap: .5vw;
+    
+}
+.user-card p{
+    display: flex;
+    align-items: center;
+    gap: .2vw;
+    font-family: var(--font-first);
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: 1vw;
+}
+.user-card p span{
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-size: .8vw;
+    font-weight: 300;
+}
+.user-card p select{
+    width: 7vw;
+    padding: .5vw;
+    border-radius: .5vw;
+    outline: none;
+    background: var(--first-color);
+    color: var(--second-color);
+    border: none;
+}
+.user-card button{
+    width: 10vw;
+    background: var(--additional-color);  
+    border: none;
+    border-radius: .5vw; 
+}
+.user-card button img{
+    width: 1.2vw;
+    height: 1.2vw;
+}
+.load-function-h2{
+    font-family: var(--font-first);
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: 1.2vw;
+}
+.emailInput-search{
+    padding: .5vw;
+    display: flex;
+    gap: .5vw;
+    width: 20vw;
+    justify-content: space-between;
+}
+.emailInput-search input{
+    border: 1px solid var(--second-color);
+    border-radius:.5vw;
+    padding: .5vw;
+    width: 100%;
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-size: .8vw;
+    background: transparent;
+    outline: none;
+}
+.emailInput-search button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--additional-color);
+    border-radius: 100%;
+    border: none;
+    padding: .5vw;
+}
+.emailInput-search button img{
+    width: 1.2vw;
+    height: 1.2vw;
+}
+.edit-course-file{
+    margin-bottom: 1vw;
+}
+
+.donthavecoursesuser{
+    font-weight: 300;
+    font-size: .8vw;
+    font-family: var(--font-second);
+    color: var(--second-color);
+}
+.course-card-user{
+    width: 40vw;
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 1vw;
+}
+.course-card-user .info{
+    width: 40vw;
+    font-weight: 300;
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-size: .8vw;
+}
+.course-card-user h3{
+    margin-bottom: .5vw;
+    font-weight: 300;
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-size: 1vw;
+}
+.course-card-user h3 span{
+    font-weight: 500;
+    font-family: var(--font-first);
+    color: var(--second-color);
+    font-size: 1.4vw;
+}
+.course-card-user button{
+    font-family: var(--font-second);
+    font-weight: 300;
+    font-size: .8vw;
+    margin-top: .5vw;
+    padding: .5vw 2vw;
+    border: none;
+    border-radius: .5vw;
+    background: var(--additional-color);
+    color: #000;
+}   
+.student-work{
+    display: flex;
+    gap: 2vw;
+}
+
+
+.lesson-title{
+    width: 30vw;
+    cursor:pointer; 
+    padding: .5vw; 
+    background: transparent; 
+    border-radius: 100px;
+    border: 1px solid var(--grey); 
+    margin-top: .5vw; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.lesson-title span{
+    font-size: .8vw;
+}
+.lesson-title .lesson-checkbox{
+    appearance: none;
+    position: relative;
+    width: 1.5vw;
+    height: 1.5vw;
+    background: #ff9595;
+    box-shadow: inset 0 0 5px rgb(0 0 0 / 0.2);
+    border-radius: 100px;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lesson-checkbox:checked{
+    background: var(--additional-color);
+}
+
+.lesson-content{
+    display: none; 
+    padding: .5vw; 
+}
+.lesson-content p{
+    font-weight: 300;
+    font-family: var(--font-second);
+    font-size: .8vw;
+}
+#lessonStats{
+    font-family: var(--font-first);
+    font-size: 1vw;
+}
+iframe{
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px){
+    #WorkSpace {
+    padding-top: 20px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 920px;
+    color: var(--second-color);
+}
+
+.title-page {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.title-page h1 {
+    height: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.title-page p {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    font-family: var(--font-second);
+    font-weight: 300;
+}
+
+
+.content-workspace {
+    margin-top: 20px;
+}
+
+.button-block {
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.button-block p {
+    font-size: 16px;
+}
+
+.button-block button {
+    gap: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.i-button {
+    width: 20px;
+    height: 20px;
+}
+
+.load-function {
+    margin-top: 20px;
+}
+
+.load-function-h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: var(--font-first);
+}
+
+.panel {
+    display: none;
+}
+
+.panel.active_pan {
+    display: block;
+}
+
+.send-form {
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    column-gap: 10px;
+}
+
+.info-element p {
+    font-size: 16px;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+}
+
+.elements input {
+    font-weight: 300;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    transition: .5s ease;
+}
+
+.elements input:focus {
+    border: 1px dashed var(--second-color);
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.name-tag {
+    font-size: 20px;
+}
+
+#availableTags,
+#tagList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#tagList {
+    min-height: 90px;
+    justify-content: center;
+    min-width: 0;
+    border: 1px dashed;
+    border-radius: 10px;
+}
+
+.tag {
+    color: var(--second-color);
+    cursor: pointer;
+    font-size: 12px;
+    font-family: var(--font-second);
+    font-weight: 300;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 100px;
+    background: var(--first-color);
+    white-space: nowrap;
+    transition: .5s ease;
+}
+
+.help-tags {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--second-color);
+    font-size: 16px;
+    font-family: var(--font-second);
+    font-weight: 300;
+}
+
+.file-upload-wrapper {
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.file-upload-button {
+    font-family: var(--font-second);
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    width: 100%;
+    background-color: var(--additional-color);
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.file-upload-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-send {
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    background: var(--additional-color);
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    font-family: var(--font-second);
+    text-align: center;
+    font-family: var(--font-second);
+    font-weight: 300;
+    font-size: 16px;
+    padding: 5px 40px;
+    border-radius: 10px;
+}
+
+.success {
+    color: rgb(0, 0, 0);
+    background: var(--additional-color);
+}
+
+.error {
+    color: red;
+    border: 1px solid red;
+    background: #ff9595;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+
+
+.panel-edit-courses{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+    margin: 0;
+}
+.edit-form{
+    border: 1px dashed var(--second-color);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.edit-form h3{
+    font-family: var(--font-first);
+    font-size:20px;
+    font-weight: 500;
+}
+.edit-form input{
+    outline: none;
+    background: none;
+    color: var(--second-color);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--second-color);
+}
+.edit-form textarea{
+    color: var(--second-color);
+    outline: none;
+    resize: none;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: var(--font-second);
+    font-weight: 300;
+    background: transparent;
+}
+.edit-form textarea::-webkit-scrollbar {
+  width: 0px;
+}
+.edit-form .btn-edit{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.btn-edit button{
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    background: var(--additional-color);
+}
+.btn-edit button img{
+    width: 20px;
+    height: 20px;
+}
+.btn-edit button:nth-child(2){
+    background: #ff9595;
+}
+
+
+
+
+#coursesContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+.container-edit{
+    padding: 10px;
+    border-radius: 10px;
+}
+.container-edit h4{
+    font-size: 16px;
+}
+.btn-container-edit{
+    border: none;
+    display: flex;
+    gap: 10px;
+}
+.btn-container-edit button{
+    border: none;
+    border-radius: 10px;
+    background: var(--additional-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.btn-container-edit button:nth-child(2){
+    background: #ff9595;
+}
+.btn-container-edit button img{
+    width: 20px;
+    height: 20px;
+}
+.user-card{
+    width: 100%;
+    gap: 10px;
+}
+.user-card p{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-first);
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: 20px;
+}
+.user-card p span{
+    font-size: 16px;
+}
+.user-card p select{
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+}
+.user-card button{
+    width: 100%;
+    background: var(--additional-color);  
+    border: none;
+    border-radius: 10px; 
+}
+.user-card button img{
+    width: 20px;
+    height: 20px;
+}
+.load-function-h2{
+    font-family: var(--font-first);
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: 20px;
+}
+.emailInput-search{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+.emailInput-search input{
+    border: 1px solid var(--second-color);
+    border-radius:10px;
+    padding: 10px;
+    width: 100%;
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+}
+.emailInput-search button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--additional-color);
+    border-radius: 100%;
+    border: none;
+    padding: 10px;
+}
+.emailInput-search button img{
+    width: 20px;
+    height: 20px;
+}
+.edit-course-file{
+    margin-bottom: 20px;
+}
+
+
+.course-card-user .info{
+    width: 100%;
+    font-size: 16px;
+}
+.course-card-user h3{
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-family: var(--font-second);
+    color: var(--second-color);
+    font-size: 20px;
+}
+.course-card-user h3 span{
+    font-weight: 500;
+    font-family: var(--font-first);
+    color: var(--second-color);
+    font-size: 25px;
+}
+.course-card-user button{
+    margin-top: 40px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background: var(--additional-color);
+    color: #000;
+}
+
+}
