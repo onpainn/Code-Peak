@@ -2,4 +2,4 @@
 ## Сайт по IT курсам
 создан для дипломной работы, выполнена часть со стороны клиента
 
-GitHub Page (http://n99390fj.beget.tech/)
+http://diletmp9.beget.tech/index.php
