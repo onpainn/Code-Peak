@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="include/logoPage.svg">
+    <link rel="stylesheet" href="style/auxiliary.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/footer.css">
+    
+    <title>Code Peak</title>
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="script/gsap.js" defer></script>   
+</head>
+
+<body>
+    <header id="Header">
+        <div class="header lg">
+            <div class="header-left">
+                <div class="logo-site">
+                    <a href="#"><img src="include/header/logo.svg" alt=""></a>
+                    <h1>Code Peak</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                 <!-- <div class="header-navigation">
+                    <ul>
+                        <li class="item-navigation active-nav"><img src="../include/header/navigation-img/home.svg" alt=""><a href="Home.html">Главная</a></li> -->
+                <a  href="html/LoginReg.html">Войти</a>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="contentability">
+            <section id="Hero">
+        <div class="content-hero">
+            <div class="main_slogan">
+            <div class="slogan main">
+                <h1 id="name-site"></h1>
+                <a href="html/LoginReg.html" class="btn_main">
+                    <p>Найти себя</p>
+                    <i data-lucide="chevron-right" class="i-main"></i>
+                </a>
+            </div>
+            <div class="dinamic_digital">
+                <div class="dinamic_digital_item">
+                    <h1 id="counter"></h1>
+                    <p>Курсов</p>
+                </div>
+                <div class="dinamic_digital_item">
+                    <h1 id="countertwo"></h1>
+                    <p>Наставников</p>
+                </div>
+                <div class="dinamic_digital_item">
+                    <h1 id="counterfree"></h1>
+                    <p>Учеников</p>
+                </div>
+            </div>
+        </div>
+        <div class="text_hero">
+            <p>Курсы по веб-разработке, Python, AI и не только — от первых строк кода до готовых проектов. Учись в своём ритме, практикуйся, получай результат.</p>
+        </div>
+        <div class="info_block_hero">
+            <div class="info_block_hero_item">
+                <div class="info_block_hero_item_img">
+                    
+                    <svg width="16.3vw" height=" 8.6vw" viewBox="0 0 313 165" xmlns="http://www.w3.org/2000/svg">
+                        <path  d="M8.36898 0C3.74692 0 0 2.96679 0 6.62651V158.373C0 162.033 3.74693 165 8.36898 165H304.631C309.253 165 313 162.033 313 158.373V80C313 68.9543 304.046 60 293 60H273C261.954 60 253 51.0457 253 40V20C253 8.9543 244.046 0 233 0H8.36898Z"/>
+                    </svg>
+                </div>
+                <h1>Помогите выбрать</h1>
+                <p>Узнайте какой курс нужен именно вам</p>
+                
+                <div class="btn_info_block_hero">
+                    <button>
+                        <i data-lucide="chevrons-right" class="i-auxiliary"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="info_block_hero_item">
+                <div class="info_block_hero_item_img">
+                    <svg  width="16.3vw" height=" 8.6vw" viewBox="0 0 313 165" xmlns="http://www.w3.org/2000/svg">
+                        <path  d="M8.36898 0C3.74692 0 0 2.96679 0 6.62651V158.373C0 162.033 3.74693 165 8.36898 165H304.631C309.253 165 313 162.033 313 158.373V80C313 68.9543 304.046 60 293 60H273C261.954 60 253 51.0457 253 40V20C253 8.9543 244.046 0 233 0H8.36898Z"/>
+                    </svg>
+                </div>
+                <h1>Переходите на наши соц сети</h1>
+                <p>Вы можете найти там интересные новости в iT</p>
+                
+                <div class="btn_info_block_hero">
+                    <button>
+                        <i data-lucide="chevrons-right" class="i-auxiliary"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="info_block_hero_item">
+                <div class="info_block_hero_item_img">
+                    <svg  width="16.3vw" height=" 8.6vw" viewBox="0 0 313 165" xmlns="http://www.w3.org/2000/svg">
+                        <path  d="M8.36898 0C3.74692 0 0 2.96679 0 6.62651V158.373C0 162.033 3.74693 165 8.36898 165H304.631C309.253 165 313 162.033 313 158.373V80C313 68.9543 304.046 60 293 60H273C261.954 60 253 51.0457 253 40V20C253 8.9543 244.046 0 233 0H8.36898Z"/>
+                    </svg>
+                </div>
+                <h1>Наш блог</h1>
+                <p>Бесплатные курсы всегда приветствуются</p>
+                
+                <div class="btn_info_block_hero">
+                    <button>
+                        <i data-lucide="chevrons-right" class="i-auxiliary"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="info_block_hero_item">
+                <div class="info_block_hero_item_img">
+                    <svg  width="16.3vw" height=" 8.6vw" viewBox="0 0 313 165" xmlns="http://www.w3.org/2000/svg">
+                        <path  d="M8.36898 0C3.74692 0 0 2.96679 0 6.62651V158.373C0 162.033 3.74693 165 8.36898 165H304.631C309.253 165 313 162.033 313 158.373V80C313 68.9543 304.046 60 293 60H273C261.954 60 253 51.0457 253 40V20C253 8.9543 244.046 0 233 0H8.36898Z"/>
+                    </svg>
+                </div>
+                <h1>Стать учителем</h1>
+                <p>Хочу быть наставником</p>
+                
+                <div class="btn_info_block_hero">
+                    <button>
+                            <i data-lucide="chevrons-right" class="i-auxiliary"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <h1 class="buf">Преимущества обучения у нас</h1>
+        <div class="buf_bar">
+            <div class="buf_bar_item">
+                <i data-lucide="book-open-check" class="i-buf"></i>
+                <p>Пошаговая программа обучения</p>
+            </div>
+            <div class="buf_bar_item">
+                <i data-lucide="briefcase-business" class="i-buf"></i>
+                <p>Практические проекты для портфолио</p>
+            </div>
+            <div class="buf_bar_item">
+                <i data-lucide="book-check" class="i-buf"></i>
+                <p>Сертификат по окончании курсов</p>
+            </div>
+            <div class="buf_bar_item">
+                <i data-lucide="users-round" class="i-buf"></i>
+                <p>Кураторы и наставники, готовые помочь в любое время</p>
+            </div>
+        </div>
+        <div class="area_bar">
+            <h1>Покори вершину программирования</h1>
+        </div>
+        </div>
+        
+            </section>
+            <section id="Comment">
+        <div class="slogan">
+            <h1 class="comment_slogan">Что про нас говорят</h1>
+            <a href="html/LoginReg.html" class="btn_main">
+                <p>Отзывы</p>
+                <i data-lucide="chevron-right" class="i-main"></i>
+            </a>
+        </div>
+        <div class="comment_bar">
+            <div class="comment_bar_item">
+                <div class="information_comment">
+                    <div class="information_comment_bar">
+                        <img src="../include/home/avatar_comm_1.png">
+                        <div class="information_comment_text">
+                            <h1>Алина</h1>
+                            <p>Frontend</p>
+                        </div>
+                    </div>
+                    <p class="information_comment_p">Я никогда не писала код и думала, что это не для меня. Но на CodePeak всё объясняется просто, без воды. Через месяц я уже сделала свой первый лендинг, а теперь учу JavaScript!</p>  
+                </div>
+                <button class="btn_comment-i"><i data-lucide="heart" class="i-like"></i></button>        
+            </div>
+            <div class="comment_bar_item">
+                <div class="information_comment">
+                    <div class="information_comment_bar">
+                        <img src="../include/home/avatar_comm_3.png">
+                        <div class="information_comment_text">
+                            <h1>Катя</h1>
+                            <p>Designer</p>
+                        </div>
+                    </div>
+                    <p class="information_comment_p">Курсы классно построены — можно проходить в любое время, и есть реальные задачи. Плюс очень тёплое комьюнити и кураторы, которые реально помогают</p>  
+                </div>
+                <button class="btn_comment-i"><i data-lucide="heart" class="i-like"></i></button>        
+            </div>
+            <div class="comment_bar_item">
+                <div class="information_comment">
+                    <div class="information_comment_bar">
+                        <img src="../include/home/avatar_comm_1.png">
+                        <div class="information_comment_text">
+                            <h1>Артём</h1>
+                            <p>Python</p>
+                        </div>
+                    </div>
+                    <p class="information_comment_p">Я прошёл курс по Python и автоматизации — и начал применять это на своей работе! CodePeak — отличная точка входа, особенно если хочешь сменить сферу без стресса</p>  
+                </div>
+                <button class="btn_comment-i"><i data-lucide="heart" class="i-like"></i></button>        
+            </div>
+        </div>
+            </section>
+    
+            <section id="Courses">
+        <h1 id="faq_h1" class="faq_h1">Открой мир программирования — учись, развивайся, достигай!</h1>
+        <div class="block_courses">
+            <div class="block_courses_item">
+                <div class="text_courses_name">
+                    <h1>1C</h1>
+                </div>
+                <div class="info_courses">
+                    <h1>1C</h1>
+                    <p class="time_line">
+                        5 месяцeв
+                    </p>
+                    <p class="info_item_courses">
+                        Изучите основы работы с платформой 1С:Предприятие. Научитесь создавать модули, автоматизировать бизнес-процессы и дорабатывать конфигурации под нужды компании                    </p>
+                </div>
+            </div>
+            <div class="block_courses_item">
+                <div class="text_courses_name">
+                    <h1>Frontend</h1>
+                </div>
+                <div class="info_courses">
+                    <h1>Frontend</h1>
+                    <p class="time_line">
+                        5 месяцeв
+                    </p>
+                    <p class="info_item_courses">
+                        Этот курс — идеальное начало для тех, кто хочет научиться программировать с нуля. Мы изучим основы алгоритмов, синтаксис популярных языков, а также создадим собственные простые проекты, такие как калькулятор, сайт-портфолио и даже мини-игру
+                    </p>
+                </div>
+            </div>
+            <div class="block_courses_item">
+                <div class="text_courses_name">
+                    <h1>Backend</h1>
+                </div>
+                <div class="info_courses">
+                    <h1>Backend</h1>
+                    <p class="time_line">
+                        11 месяцeв
+                    </p>
+                    <p class="info_item_courses">
+                        Освойте серверную часть веб-приложений: работа с базами данных, API, авторизация и логика приложений. Языки: Python, PHP, Node.js или Java.                    </p>
+                </div>
+            </div>
+            <div class="block_courses_item">
+                <div class="text_courses_name">
+                    <h1>3D</h1>
+                </div>
+                <div class="info_courses">
+                    <h1>3D</h1>
+                    <p class="time_line">
+                        7 месяцeв
+                    </p>
+                    <p class="info_item_courses">
+                        Научитесь создавать 3D-модели, анимации и рендеры. Подходит для начинающих дизайнеров и будущих геймдев-разработчиков. Используемые программы: Blender, 3ds Max.                    </p>
+                </div>
+            </div>
+            <div class="block_courses_item">
+                <div class="text_courses_name">
+                    <h1>Hacking</h1>
+                </div>
+                <div class="info_courses">
+                    <h1>Ethical Hacking</h1>
+                    <p class="time_line">
+                        12 месяцeв
+                    </p>
+                    <p class="info_item_courses">
+                        Разберитесь в основах кибербезопасности, учитесь искать уязвимости, тестировать системы на прочность и защищать данные. Всё легально и в рамках этичного хакинга.
+                    </p>
+                </div>
+            </div>
+            <div class="block_courses_item">
+                <div class="text_courses_name">
+                    <h1>Designer</h1>
+                </div>
+                <div class="info_courses">
+                    <h1>Графический дизайн</h1>
+                    <p class="time_line">
+                        5 месяцeв
+                    </p>
+                    <p class="info_item_courses">
+                        Освойте принципы визуальной композиции, цвета и типографики. Научитесь работать в Figma, Photoshop и Illustrator, создавая логотипы, баннеры и интерфейсы.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a href="html/LoginReg.html" class="btn_main">
+            <p>Курсы</p>
+            <i data-lucide="chevron-right" class="i-main"></i>
+        </a>
+            </section>
+
+            <section id="Faq">
+        <h1 id="faq_h1" class="faq_h1">FAQ</h1>
+        <div class="faq_bar">
+            <div class="faq__item">
+                <button class="collapsible">Нужно ли иметь опыт в программировании, чтобы начать?</button>
+                <div class="content">
+                  <p>Нет. Большинство наших курсов рассчитаны на новичков. Мы начинаем с самых основ и идём шаг за шагом.</p>
+                </div>
+                <button class="collapsible">Есть ли доступ к преподавателям или наставникам?</button>
+                <div class="content">
+                  <p>Да. В каждом курсе есть чат поддержки, а также возможность задать вопросы кураторам</p>
+                </div>
+                <button class="collapsible">Сколько времени займёт прохождение курса?</button>
+                <div class="content">
+                  <p>Это зависит от выбранного курса. В среднем — от 4 до 10 часов контента. Но ты учишься в своём темпе — без дедлайнов.</p>
+                </div>
+            </div>
+            <div class="faq__item">  
+                  <button class="collapsible">Как проходят занятия? Это видео или текст?</button>
+                  <div class="content">
+                    <p>Большинство курсов — в формате видео-уроков + практических заданий. Также есть интерактивные тесты и проекты.</p>
+                  </div>
+                  <button class="collapsible">Выдаются ли сертификаты после прохождения?</button>
+                  <div class="content">
+                    <p>Да. После завершения курса ты получаешь именной сертификат, который можно добавить в LinkedIn или портфолио.</p>
+                  </div>
+                  <button class="collapsible">Сколько стоят курсы?</button>
+                  <div class="content">
+                    <p>Есть как бесплатные, так и платные курсы. Цены зависят от сложности и объёма. Мы также регулярно запускаем скидки и акции.</p>
+                  </div>
+
+            </div>
+        </div>
+            </section>
+        
+
+    <footer  role="contentinfo" id="Footer">
+        <div class="section_footer">
+            <div class="section_footer_item">
+                <h1>Страницы сайта</h1>
+                <div class="section_footer_text">
+                    <a href="html/LoginReg.html">Главная</a>
+                    <a href="html/LoginReg.html">Курсы</a>
+                    <a href="html/LoginReg.html">Занятия</a>
+                    <a href="html/LoginReg.html">Помощь</a>
+                </div>
+            </div>
+            <div class="section_footer_item">
+                <h1>Контакты</h1>
+                <div class="section_footer_text">
+                    <a href="">8 433 232 11 22</a>
+                    <a href="">cpschool@mail.ru</a>
+                </div>
+            </div>
+            <div class="section_footer_item">
+                <h1>Правовое уведомление</h1>
+                <div class="section_footer_text">
+                    <a href="">Условия и положения</a>
+                    <a href="">Лицензионное соглашение</a>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Cookies Settings</a>
+                </div>
+            </div>
+            <div class="section_footer_item">
+                <h1>Поддержка</h1>
+                <div class="section_footer_text">
+                    <a href="">FAQ</a>
+                </div>
+            </div>
+            <div class="section_footer_item">
+                <h1>Социальные сети</h1>
+                <div class="section_footer_text">
+                    <a href="">Телеграмм</a>
+                    <a href="">Вконтакте</a>
+                </div>
+            </div>
+        </div>
+        <img class="imgFooter" src="../include/home/iconCarrier.svg">
+    </footer>
+        </div>
+    </div>
+
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="../script/home.js" defer></script>
+</body>
+</html>

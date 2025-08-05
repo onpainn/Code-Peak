@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../include/logoPage.svg" />
+    <link rel="stylesheet" href="../style/auxiliary.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/home.css" />
+    <link rel="stylesheet" href="../style/footer.css" />
+    <link rel="stylesheet" href="../style/WorkSpace.css" />
+    <script src="../script/header.js" defer></script>
+    <script src="../script/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Code Peak</title>
+  </head>
+  <body>
+    <header id="Header">
+      <div class="mobile-heder">
+        <nav class="mobile-heder-nav">
+          <button data-target="account-overlay" class="nav-mob"><i data-lucide="user-round" class="i-mob-header"></i></button>
+          <a href="Home.html" class="nav-mob"><i data-lucide="house" class="i-mob-header"></i></a>
+          <a href="Courses.html" class="nav-mob"><i data-lucide="code" class="i-mob-header"></i></a>
+          <a href="WorkSpace.html" class="nav-mob"><i data-lucide="folder" class="i-mob-header"></i></a>
+          <button data-target="settings-overlay" class="nav-mob"><i data-lucide="settings-2" class="i-mob-header"></i></button>
+        </nav>
+      </div>
+      <div class="header">
+        <div class="header-left">
+          <div class="logo-site">
+            <a href="Home.html"
+              ><img src="../include/header/logo.svg" alt=""
+            /></a>
+            <h1>Code Peak</h1>
+          </div>
+          <p id="datetime_menu"></p>
+          <div class="search">
+            <input type="text" placeholder="Поиск..." />
+            <button class="icon_search">
+              <i data-lucide="search" class="i-header mini"></i>
+            </button>
+          </div>
+          <div class="header-navigation">
+            <ul>
+              <li class="item-navigation">
+                <a href="Home.html" class=""
+                  ><i data-lucide="house" class="i-header"></i>Главная</a
+                >
+              </li>
+              <li class="item-navigation">
+                <a href="Courses.html"
+                  ><i data-lucide="code" class="i-header"></i>Курсы</a
+                >
+              </li>
+              <li class="item-navigation">
+                <a href="WorkSpace.html"
+                  ><i data-lucide="folder" class="i-header"></i>Work Space</a
+                >
+              </li>
+              <li class="item-navigation">
+                <a href="Home.html#Faq"
+                  ><i data-lucide="circle-help" class="i-header"></i>Помощь</a
+                >
+              </li>
+              <div class="hover-bg"></div>
+            </ul>
+          </div>
+        </div>
+        <div class="header-right">
+          <button data-target="notification-overlay">
+            <i data-lucide="bell-dot" class="i-header mini"></i
+            ><span>Уведомления</span>
+          </button>
+          <button data-target="settings-overlay">
+            <i data-lucide="settings-2" class="i-header mini"></i
+            ><span>Настройки</span>
+          </button>
+          <button data-target="account-overlay">
+            <i data-lucide="user-round" class="i-header mini"></i
+            ><span>Аккаунт</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="notification-overlay" class="overlay-nav">
+      <div class="overlay-content">
+        <h1>Уведомления</h1>
+        <div class="massage" id="notification-container"></div>
+        <button class="close">Закрыть</button>
+      </div>
+    </div>
+    <div id="settings-overlay" class="overlay-nav">
+      <div class="overlay-content">
+        <h1>Настройки</h1>
+        <div class="change-color">
+          <p>Выберете цвет</p>
+          <div class="color-select">
+            <button id="colorone" class="color-btn"></button>
+            <button id="colortwo" class="color-btn"></button>
+            <button id="colorthree" class="color-btn"></button>
+            <button id="colorfour" class="color-btn"></button>
+          </div>
+        </div>
+        <div class="dark-mode">
+          <p>Темная тема</p>
+          <div id="themeToggle" class="power">
+            <i
+              id="themeToggle"
+              data-lucide="power"
+              class="i-header mini tran"
+            ></i>
+          </div>
+        </div>
+        <button class="close">Закрыть</button>
+      </div>
+    </div>
+    <div id="account-overlay" class="overlay-nav">
+      <div class="account-btn-close">
+        <button class="close account-btn">
+          <img src="../include/header/close.svg" />
+        </button>
+      </div>
+      <div class="overlay-content" id="profileContainer"></div>
+    </div>
+    
+    <div id="messageUsers"></div>
+    <section id="WorkSpace">
+      <div class="title-page">
+        <h1>Рабочее место</h1>
+        <p>
+          Это ваше рабочее пространство со статистикой и активность. Можно посмотреть предстоящее занятие и домашнюю работу
+        </p>
+      </div>
+      <div class="content-workspace">
+        <div data-role="admin">
+          <div class="button-block">
+            <button>
+              <p>Создать курс</p>
+              <i data-lucide="plus" class="i-button"></i>
+            </button>
+            <button>
+              <p>Удаление/Редактирование</p>
+              <i data-lucide="x" class="i-button"></i>
+            </button>
+            <button>
+              <p>Поменять роль</p>
+              <i data-lucide="user-round-pen" class="i-button"></i>
+            </button>
+          </div>
+          <div class="load-function">
+            <div id="panel-create" class="panel send-course">
+              <h1 class="load-function-h1">Создание курса</h1>
+              <form id="createformcourse" class="send-form">
+                <div class="elements">
+                  <input
+                    placeholder="Название курса"
+                    id="name_course"
+                    maxlength="30"
+                    type="text"
+                    required
+                  />
+                  <div class="info-element"></div>
+                </div>
+                <div class="elements">
+                  <input
+                    placeholder="Время"
+                    id="time-course"
+                    max="99"
+                    maxlength="2"
+                    min="1"
+                    type="number"
+                    required
+                  />
+                  <div class="info-element">
+                    <p>ч</p>
+                  </div>
+                </div>
+                <div class="elements">
+                  <input
+                    placeholder="Краткое описание"
+                    id="description-course"
+                    maxlength="300"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div class="elements">
+                  <input
+                    placeholder="Цена"
+                    id="cost-course"
+                    type="number"
+                    min="0"
+                    maxlength="6"
+                    required
+                  />
+                  <div class="info-element">
+                    <p>p</p>
+                  </div>
+                </div>
+                <div class="elements">
+                  <div class="file-upload-wrapper">
+                    <div class="file-upload-button">Загрузить файл</div>
+                    <input
+                      class="file-upload-input"
+                      type="file"
+                      id="banner-course"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="elements">
+          
+                      <select id="teacherSelect" required>
+                        
+                      </select>
+                    
+                </div>
+                <div class="elements tags">
+                  <h1 class="name-tag">Выберите теги:</h1>
+                  <div id="availableTags">
+                    <p class="tag">1С</p>
+                    <p class="tag">Frontend</p>
+                    <p class="tag">Backend</p>
+                    <p class="tag">mongoDB</p>
+                    <p class="tag">Pyton</p>
+                    <p class="tag">3D</p>
+                    <p class="tag">SQL</p>
+                    <p class="tag">TS</p>
+                    <p class="tag">Design</p>
+                    <p class="tag">NodeJS</p>
+                    <p class="tag">React</p>
+                    <p class="tag">JavaScript</p>
+                  </div>
+                  <p class="help-tags">Можно выбрать не более 5 тегов</p>
+                  <div id="selectedTagsContainer">
+                    <h1 class="name-tag">Выбранные теги:</h1>
+                    <div id="tagList"></div>
+                    <p class="help-tags">Нажмите на фильтр что бы удалить</p>
+                  </div>
+                </div>
+                <button class="btn-send">
+                  <i data-lucide="plus" class="i-button"></i>
+                </button>
+                <p id="massage-post"></p>
+              </form>
+            </div>
+            <div id="panel-edit" class="panel">
+              <h1 class="load-function-h1">Редактирование/Удаление</h1>
+              <!-- форма редактирования/удаления -->
+              <div class="panel-edit-courses">
+                <div id="coursesContainer"></div>
+              </div>
+            </div>
+              <div id="panel-role" class="panel">
+                <h1 class="load-function-h1">Сменить роль</h1>
+                <!-- форма смены роли -->
+                <h2 class="load-function-h2">Найти пользователя по email</h2>
+                <div class="emailInput-search">
+                  <input type="email" id="emailInput" placeholder="Введите email">
+                  <button onclick="searchUser()"><img src="../include/pen.svg" alt=""></button>
+                </div>
+
+
+    <div id="userInfo" class="user-card">
+    <p>Имя:<span id="userName"></span></p>
+    <p>email: <span id="userEmail"></span></p>
+    <p>Роль: 
+      <select id="roleSelect">
+        <option value="student">student</option>
+        <option value="teacher">teacher</option>
+        <option value="admin">admin</option>
+      </select>
+    </p>
+    
+    <button onclick="updateRole()"><img src="../include/check-check.svg"></button>
+  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-role="teacher">
+            <div id="teacher-courses"></div>
+        </div>
+        <div data-role="student" class="student-work">
+          <div id="workspaceCourses-user"></div>
+          <div>
+            <div id="lessonStats"></div>
+            <div id="lessonList"></div>
+          </div>
+        </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <footer role="contentinfo" id="Footer">
+      <div class="section_footer">
+        <div class="section_footer_item">
+          <h1>Страницы сайта</h1>
+          <div class="section_footer_text">
+            <a href="Home.html">Главная</a>
+            <a href="Courses.html">Курсы</a>
+            <a href="WorkSpace.html">Work Space</a>
+            <a href="">Помощь</a>
+          </div>
+        </div>
+        <div class="section_footer_item">
+          <h1>Контакты</h1>
+          <div class="section_footer_text">
+            <a href="">8 433 232 11 22</a>
+            <a href="">cpschool@mail.ru</a>
+          </div>
+        </div>
+        <div class="section_footer_item">
+          <h1>Правовое уведомление</h1>
+          <div class="section_footer_text">
+            <a href="">Условия и положения</a>
+            <a href="">Лицензионное соглашение</a>
+            <a href="">Политика конфиденциальности</a>
+            <a href="">Cookies Settings</a>
+          </div>
+        </div>
+        <div class="section_footer_item">
+          <h1>Поддержка</h1>
+          <div class="section_footer_text">
+            <a href="">FAQ</a>
+          </div>
+        </div>
+        <div class="section_footer_item">
+          <h1>Социальные сети</h1>
+          <div class="section_footer_text">
+            <a href="">Телеграмм</a>
+            <a href="">Вконтакте</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="../script/workspace.js"></script>
+  </body>
+</html>
